@@ -3,7 +3,7 @@ Taking data from the Coinbase API and experimenting with ML models.
 
 We are taking data from Coinbase's websocket and passing it through Kafka to be stored and preprocessed:
 
-'''
+```
 def handle_ticker_batch_event(tickers, timestamp):
     try:
         for ticker in tickers:
@@ -13,4 +13,4 @@ def handle_ticker_batch_event(tickers, timestamp):
             producer.flush()
     except Exception as e:
         print(f"Error in handle_ticker_batch_event: {e}")
-'''
+```
